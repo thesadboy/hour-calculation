@@ -1,5 +1,5 @@
 import {bitable, FieldId, FieldType, IRecord, ITable, NumberFormatter} from "@lark-base-open/js-sdk";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 import duration from 'dayjs/plugin/duration'
 import {holidays} from "./hooks/use-holidays.ts";
 import {Dayjs} from "dayjs";

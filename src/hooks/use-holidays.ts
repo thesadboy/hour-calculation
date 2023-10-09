@@ -1,6 +1,6 @@
 import {ref} from "vue";
 import {Dayjs} from "dayjs";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 
 const holidays = ref<Dayjs[]>([])
 const useHolidays = (year: number) => {

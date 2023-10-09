@@ -1,6 +1,6 @@
 import {Ref, ref, watch} from "vue";
 import {bitable, IFieldMeta, ITable, ITableMeta} from "@lark-base-open/js-sdk";
-import * as dayjs from "dayjs";
+import dayjs from "dayjs";
 
 export const useTableMetaData = () => {
   const tables = ref<ITableMeta[]>([])
