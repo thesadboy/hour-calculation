@@ -8,7 +8,7 @@ import {ElementPlusResolver} from 'unplugin-vue-components/resolvers'
 export default defineConfig({
   base: '',
   build: {
-    outDir: 'doc'
+    outDir: 'docs'
   },
   plugins: [
     vue(),
