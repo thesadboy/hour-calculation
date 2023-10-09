@@ -33,11 +33,9 @@ export const useTableColumns = (tableId: Ref<string>) => {
     maybeEndColumn.value = undefined
     maybeStartColumn.value = undefined
     const table: ITable = await bitable.base.getTableById(value)
-    const [{id: viewId}] = await table.getViewList()
-    const view = await table.getViewById(viewId)
-    const data = await view.getFieldMetaList()
+    const data = await table.getFieldMetaList()
     maybeStartColumn.value = data.find(item => item.name.startsWith('开始'))
-    maybeEndColumn.value = data.find(item => item.name.startsWith('实际'))
+    maybeEndColumn.value = data.find(item => item.name.startsWith('实际结束'))
     columns.value = data
   }, {immediate: true})
   return {columns, maybeEndColumn, maybeStartColumn}

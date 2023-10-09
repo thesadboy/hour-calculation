@@ -52,18 +52,18 @@ const handleGenerateData = async () => {
           <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="选择数据表">
-        <el-select v-model="formData.table" :loading="!options.length" placeholder="请选择数据表">
+      <el-form-item label="当前数据表">
+        <el-select v-model="formData.table" :loading="!options.length" placeholder="请选择数据表" disabled>
           <el-option :value="item.id" :label="item.name" v-for="item in tables" :key="item.id"></el-option>
         </el-select>
       </el-form-item>
       <el-form-item label="选择需求开始时间字段">
-        <el-select v-model="formData.start" :loading="!columns.length" placeholder="请选择">
+        <el-select v-model="formData.start" v-loading="!columns.length" placeholder="请选择">
           <el-option v-for="item in columns" :key="item.id" :value="item.id" :label="item.name"></el-option>
         </el-select>
       </el-form-item>
       <el-form-item label="选择需求实际结束时间字段">
-        <el-select v-model="formData.end" :loading="!columns.length" placeholder="请选择">
+        <el-select v-model="formData.end" v-loading="!columns.length" placeholder="请选择">
           <el-option v-for="item in columns" :key="item.id" :value="item.id" :label="item.name"></el-option>
         </el-select>
       </el-form-item>
